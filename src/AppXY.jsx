@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function AppXY() {
+    // 상태를 객체단위로 보관하고 업데이트
   const [position, setPosition] = useState({ x: 0, y: 0 });
   //   const [x, setX] = useState(0);
   //   const [y, setY] = useState(0);
