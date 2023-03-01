@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import AppTheme from "./AppTheme";
+import AppClass from "./AppClass";
+import AppMentorsButton from "./AppMentorsButton";
 import "./AppXY.css";
+import AppProducts from "./basic/AppProducts";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppTheme />
+    <AppClass />
   </React.StrictMode>
 );
 
