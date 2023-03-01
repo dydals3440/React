@@ -18,6 +18,7 @@ export default function AppForm() {
   };
   return (
     <form onSubmit={handleSubmit}>
+      {/* value는 state에 있는 name을 사용, onChang가 발생하면 사용자가 무엇인가 입력하면 아무렇게나 업데이트 되는 것이 아닌 내가 등록해준 콜백함수를 실행 */}
       <label htmlFor="name">이름</label>
       <input
         type="text"

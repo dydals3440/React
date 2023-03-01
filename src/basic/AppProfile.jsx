@@ -1,4 +1,4 @@
-import "./App.css";
+import "/Users/kim-yongmin/Desktop/react/basic/src/basic/App.css";
 import Profile from "./components/Profile.jsx";
 import Avatar from "./components/Avatar.jsx";
 
