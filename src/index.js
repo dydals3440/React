@@ -1,19 +1,13 @@
 import React from "react";
-import "./index.css";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Button1 from "./components/Button1";
-import Button2 from "./components/Button2";
-import StyledComponent from "./components/StyledComponent";
-import TailwindComponent from "./components/TailwindComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Button1 />
-    <Button2 />
-    <StyledComponent />
-    <TailwindComponent />
+    <App />
   </React.StrictMode>
 );
 
