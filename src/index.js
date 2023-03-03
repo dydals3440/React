@@ -1,15 +1,19 @@
 import React from "react";
+import "./index.css";
 import ReactDOM from "react-dom/client";
-import AppClass from "./AppClass";
-import AppMentorsButton from "./AppMentorsButton";
-import "./AppXY.css";
-import AppProducts from "./basic/AppProducts";
 import reportWebVitals from "./reportWebVitals";
+import Button1 from "./components/Button1";
+import Button2 from "./components/Button2";
+import StyledComponent from "./components/StyledComponent";
+import TailwindComponent from "./components/TailwindComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppClass />
+    <Button1 />
+    <Button2 />
+    <StyledComponent />
+    <TailwindComponent />
   </React.StrictMode>
 );
 
