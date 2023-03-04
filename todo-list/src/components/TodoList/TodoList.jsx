@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
+import styles from "./TodoList.module.css";
 
 export default function ToDoList({ filter }) {
   const [todos, setTodos] = useState([
@@ -26,8 +27,8 @@ export default function ToDoList({ filter }) {
   // 필터링 함수 만듬
   const filtered = getFilteredItems(todos, filter);
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filtered.map((item) => (
           // 삭제하고 완성했는지 안했는지를 Todo.jsx(컴포넌트) 관리
           // todo가 무엇인지 item자체를 전달

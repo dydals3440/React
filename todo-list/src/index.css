@@ -4,6 +4,16 @@
   --color-grey: #d1d1d1;
   --color-text: #22243b;
   --color-accent: #f16e03;
+  --color-white: white;
+  --color-scrollbar: #aaa7a7;
+}
+
+/* 위에 root처럼 잘 정리해두면, 덮어씌우는 것은 매우 easy */
+html.dark {
+  --color-bg-dark: #1a1c35;
+  --color-bg: #22243b;
+  --color-grey: #4e4e4e;
+  --color-text: #fdfffd;
 }
 
 body {
@@ -18,6 +28,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
+  /* 브라우저에서 기본적으로 accent-color이용 체크박스가 주황색으로 됨 클릭시 */
+  accent-color: var(--color-accent);
   background: rgb(239, 239, 240);
   background: linear-gradient(
     90deg,
@@ -48,12 +61,33 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
 }
 
 button {
+  cursor: pointer;
   outline: none;
   border: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
 }

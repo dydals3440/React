@@ -2,9 +2,23 @@
   display: flex;
   justify-content: space-between;
   /* 위의 둥그런 사각형 모양이 안보임 index.css #root에서 overflow: hidden로 해결 자식이 부모를 침범했을떄*/
+  padding: 0 0.5rem;
   align-items: center;
   background-color: var(--color-bg-dark);
   border-bottom: 1px solid var(--color-grey);
+}
+
+.toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-text);
+  transition: all 150ms ease-out;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+  color: var(--color-accent);
 }
 
 .filters {
