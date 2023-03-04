@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* 위의 둥그런 사각형 모양이 안보임 index.css #root에서 overflow: hidden로 해결 자식이 부모를 침범했을떄*/
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.filters {
+  display: flex;
+}
+
+.filter {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  text-transform: caplitalize;
+  background-color: transparent;
+  color: var(--color-accent);
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.filter:hover,
+.filter.selected {
+  opacity: 1;
+}
+
+/* all, active, completed에 밑줄 긋기 */
+.filter.selected::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  border: 1px solid var(--color-text);
+}
