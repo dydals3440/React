@@ -9,10 +9,11 @@ export default function AddTodo({ onAdd }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    // 순서 주의 반드시 onAdd 이전에 넣어야함.
     if (text.trim() === "") {
       return;
     }
-    onAdd({ id: uuidv4(), text, status: false });
+    onAdd({ id: uuidv4(), text, status: "active" });
     setText("");
   };
   return (

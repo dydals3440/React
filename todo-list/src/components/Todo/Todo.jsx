@@ -6,7 +6,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
   //  이렇게 작성하면 todo.status, todo.text 이렇게 안써도 text status 만으로 접근 가능
   const { status, text } = todo;
   const handleChange = (e) => {
-    const status = e.target.checked ? true : false;
+    const status = e.target.checked ? "completed" : "active";
     onUpdate({ ...todo, status: status });
     // onUpdate({ ...todo, status: e.target.checked ? true : false });
   };
@@ -16,7 +16,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
       <input
         type="checkbox"
         id="checkbox"
-        checked={status === true}
+        checked={status === "completed"}
         onChange={handleChange}
       />
       <label htmlFor="checkbox">{text}</label>
