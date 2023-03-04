@@ -7,12 +7,12 @@ export default function ToDoList() {
     {
       id: "1",
       text: "밥먹기",
-      status: true,
+      status: false,
     },
     {
       id: "2",
       text: "공부하기",
-      status: true,
+      status: false,
     },
   ]);
   const handleAdd = (todo) => setTodos([...todos, todo]);

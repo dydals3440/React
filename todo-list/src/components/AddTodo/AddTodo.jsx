@@ -9,7 +9,11 @@ export default function AddTodo({ onAdd }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd({ id: uuidv4(), text, status: true });
+    if (text.trim() === "") {
+      return;
+    }
+    onAdd({ id: uuidv4(), text, status: false });
+    setText("");
   };
   return (
     <form onSubmit={handleSubmit}>
