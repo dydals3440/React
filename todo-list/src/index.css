@@ -9,6 +9,7 @@
 }
 
 /* 위에 root처럼 잘 정리해두면, 덮어씌우는 것은 매우 easy */
+/* 원하는 변수에 한해서 원하는 값으로 재정의 */
 html.dark {
   --color-bg-dark: #1a1c35;
   --color-bg: #22243b;

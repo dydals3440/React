@@ -5,7 +5,7 @@ import styles from "./Todo.module.css";
 export default function Todo({ todo, onUpdate, onDelete }) {
   // text와 status라는 값을 todo로 부터 받아올 것이다.
   //  이렇게 작성하면 todo.status, todo.text 이렇게 안써도 text status 만으로 접근 가능
-  const { status, text } = todo;
+  const { id, status, text } = todo;
   const handleChange = (e) => {
     const status = e.target.checked ? "completed" : "active";
     onUpdate({ ...todo, status: status });
@@ -17,11 +17,11 @@ export default function Todo({ todo, onUpdate, onDelete }) {
       <input
         className={styles.checkbox}
         type="checkbox"
-        id="checkbox"
+        id={id}
         checked={status === "completed"}
         onChange={handleChange}
       />
-      <label htmlFor="checkbox" className={styles.text}>
+      <label htmlFor={id} className={styles.text}>
         {text}
       </label>
       <span className={styles.icon}>
